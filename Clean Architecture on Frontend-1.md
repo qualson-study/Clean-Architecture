@@ -19,7 +19,7 @@
 
 - It is the entities and data that describe the subject area of the application, as well as the code to transform that data
 - The domain is the core that distinguishes one application from another.
-- 프레임워크를 React to Angular 바꾸거나 use case를 바꿔도 변하지 않는 코어 부분이 도메인이다.
+- 프레임워크를 React에서 Angular로 바꾸거나 use case를 바꿔도 변하지 않는 코어 부분이 도메인이다.
   - ex. 상점의 경우 제품, 주문, 사용자, 장바구니 및 데이터를 업데이트하는 기능은 프레임워크에 종속적이지 않다.
 - 도메인 엔터티의 데이터 구조와 변환의 본질은 외부 세계와 독립적입니다. ??
   - 장바구니에 항목을 추가하는 기능은 항목이 정확히 얼마나 추가되었는지에 상관하지 않습니다. "구매" 버튼을 통해 사용자가 직접 또는 프로모션 코드를 사용하여 자동으로. 두 경우 모두 항목을 수락하고 추가된 항목과 함께 업데이트된 장바구니를 반환합니다. << 이해 안감
@@ -29,7 +29,7 @@
 
 ### 2. Application Layer
 
-- This layer describes use cases, i.e. user scenarios.
+- This layer describes **use cases**, i.e. user scenarios.
 - 어떤 event가 발생한 후에 일어나는 일에 책임지는 부분
 - 장바구니에 추가 = use case = 버튼 이벤트(A) + 이후에 일어나는 일(B)
   - 버튼 클릭 이벤트가 발생한 후에 어떠어떠하게 되어야한다~ 를 설명하자면, 아래와 같으며 이것이 일종의 "orchestrator"이다. 즉 orchestrator = B라고 이해할 수 있을 것 같다.
@@ -93,3 +93,9 @@
 2. Obey Dependency Rule
    - 외부 서비스는 우리의 필요에 맞게 조정되어야 하며 그렇지 않은 경우에는 절대 적용하지 말라.
    - "fine-tuning"하고 있다면 뭔가 잘못된게 아닌지 점검해보자
+
+<br>
+
+## 참고
+
+- [Alex Bespoyasov, Clean Architecture on Frontend (2021)](https://dev.to/bespoyasov/clean-architecture-on-frontend-4311)
