@@ -2,22 +2,23 @@ import { useState } from "react";
 import { Redirect } from "react-router";
 
 import { UserName } from "@/domain/user";
+import { useAuthenticate } from "@/application/authenticate";
 
 function Auth() {
   const [name, setName] = useState<UserName>("");
   const [email, setEmail] = useState<Email>("");
   const [loading, setLoading] = useState(false);
 
+  const { user, authenticate } = useAuthenticate();
+
   const handleSubmit = async (e: React.FormEvent) => {
     setLoading(true);
     e.preventDefault();
 
-    // authenticate logic here
+    await authenticate(name, email);
 
     setLoading(false);
   };
-
-  const user = {};
 
   if (!!user) return <Redirect to='/' />;
 
