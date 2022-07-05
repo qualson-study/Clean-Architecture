@@ -1,9 +1,9 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Auth from "./ui/Auth";
-import User from "./ui/User";
-import Front from "./ui/Front";
+import Auth from "@/ui/Auth";
+import User from "@/ui/User";
+import Front from "@/ui/Front";
 
 // feat: 1. UI in Adapter - Page Route
 function App() {
